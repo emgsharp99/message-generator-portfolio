@@ -1,5 +1,5 @@
 const weatherObjects = {
-  _weather: ['sunny', 'rainy', 'frosty', 'thundery', 'lightning', 'windy', 'tornado-y', 'hurricaney', 'foggy', 'raining frogs', 'chocolate rain', 'heat wavey'],
+  _weather: ['sunny', 'rainy', 'frosty', 'thundery', 'lightning', 'windy', 'tornado-y', 'hurricaney', 'fog', 'raining frogs', 'chocolate rain', 'heat wave'],
   _clothes: ['a hat', 'a wooly jumper', 'thick socks', 'shorts', 'fake eyelashes', 'no shoes'],
   _action: ['jump in puddles', 'stay at home', 'go to the beach', 'watch the clouds', 'climb a tall metal pole', 'go for a run'],
 
@@ -49,7 +49,7 @@ const messageGenerator = obj => {
   const randClothes = clothes[randIndex(clothes)];
   const randAction = action[randIndex(action)];
 
-  return `Today it is ${randWeather}, we suggest you wear ${randClothes} and try to ${randAction}.`;
+  return `Today there is ${randWeather}, we suggest you wear ${randClothes} and try to ${randAction}.`;
 }
 
 console.log(messageGenerator(weatherObjects))
