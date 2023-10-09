@@ -1,0 +1,4 @@
+const weatherObjects = {
+  weatherTypes = [],
+  clothes = [].
+}

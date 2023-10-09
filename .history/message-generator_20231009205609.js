@@ -1,7 +1,7 @@
 const weatherObjects = {
   _weather: ['sun', 'rain', 'frost', 'thunder', 'lightning', 'wind', 'tornado', 'hurricane', 'fog', 'raining frogs', 'chocolate rain', 'heat wave'],
   _clothes: ['a hat', 'a wooly jumper', 'thick socks', 'shorts', 'fake eyelashes', 'no shoes'],
-  _action: ['jump in puddles', 'stay at home', 'go to the beach', 'watch the clouds', 'climb a tall metal pole', 'go for a run'],
+  _action: [], //['jump in puddles', 'stay at home', 'go to the beach', 'watch the cloud', 'climb a tall metal pole', 'go for a run'],
 
   get weather() {
     if (this._weather.length > 0) {
@@ -42,14 +42,9 @@ const messageGenerator = obj => {
   const clothes = obj.clothes;
   const action = obj.action;
   if ((weather === -1) || (clothes === -1) || (action === -1)) {
-    return 'One or more inputs was empty. Add to them and try again.';
+    return ''
   }
-
-  const randWeather = weather[randIndex(weather)];
-  const randClothes = clothes[randIndex(clothes)];
-  const randAction = action[randIndex(action)];
-
-  return `Today there is ${randWeather}, we suggest you wear ${randClothes} and try to ${randAction}.`;
+  const randWeather = weather[randIndex(weather)]
 }
 
-console.log(messageGenerator(weatherObjects))
+messageGenerator(weatherObjects)

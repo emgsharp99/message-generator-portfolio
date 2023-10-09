@@ -49,7 +49,9 @@ const messageGenerator = obj => {
   const randClothes = clothes[randIndex(clothes)];
   const randAction = action[randIndex(action)];
 
-  return `Today there is ${randWeather}, we suggest you wear ${randClothes} and try to ${randAction}.`;
+  return `Today it is ${randWeather}, we suggest you `
+
+  console.log(randWeather, randClothes,randAction);
 }
 
 console.log(messageGenerator(weatherObjects))
